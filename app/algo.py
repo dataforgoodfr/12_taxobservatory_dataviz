@@ -956,7 +956,7 @@ def mnc_tracked(
     data = df.groupby("mnc")["year"].nunique().sort_values(ascending=False).to_dict()
 
     # Create a blank image
-    image = Image.new("RGB", (1200, 1000), (255, 255, 255))
+    image = Image.new("RGB", (image_width, image_height), (255, 255, 255))
     draw = ImageDraw.Draw(image)
 
     # Load a default scalable font
