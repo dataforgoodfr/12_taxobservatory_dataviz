@@ -280,7 +280,7 @@ color: rgba(0,0,0,0.0)
 }
 
 .world-bg {
-    background-image: url("../../assets/images/world_map.png");
+    background-image: url("../../assets/images/world_map.jpg");
 }
 
 .footer-bg {
@@ -618,7 +618,7 @@ hr.header-hr35 {
 }
 
 .world {
-    background-image: url("../../images/world_map.png");
+    background-image: url("../../images/world_map.jpg");
     background-size: cover;
 }
 

@@ -7,7 +7,7 @@ from app.viz import Viz
 # from app.data.data import data
 
 # Path to images
-world_map_path = f"{cfg.IMAGES}/world_map.png"
+world_map_path = f"{cfg.IMAGES}/world_map.jpg"
 download_icon_path = f"{cfg.IMAGES}/Vector.svg"
 
 
