@@ -16,7 +16,7 @@ We might have missed out in its report.<br/>
 { .text-blue .text-weight300 .cpt12}
 |>
 
-<|{company_image_path}|image|width=100%|>
+<|{company_image_path}|image|width=100%|class_name=company-image|>
 
 |>
 

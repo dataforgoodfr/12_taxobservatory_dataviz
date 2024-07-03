@@ -283,8 +283,12 @@ color: rgba(0,0,0,0.0)
     background-image: url("../../assets/images/world_map.jpg");
 }
 
+.company-image {
+    border-radius: 22px;
+}
+
 .footer-bg {
-    background-color: #B8BEDB
+    background-color: #B8BEDB;
 }
 
 /* Taipy classes */
@@ -293,7 +297,7 @@ color: rgba(0,0,0,0.0)
     margin: 0 auto;
     background-color: white !important;
     box-shadow: none;
-    -webkit-text-fill-color: initial !important
+    -webkit-text-fill-color: initial !important;
 }
 
 .container {
