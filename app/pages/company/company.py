@@ -8,7 +8,7 @@ from app import algo
 from app import config as cfg
 from app.viz import Viz
 
-company_image_path = f"{cfg.IMAGES}/pexels-ingo-joseph-1880351.png"
+company_image_path = f"{cfg.IMAGES}/company-image.jpg"
 
 DEFAULT_COMPANY = "SHELL"
 
