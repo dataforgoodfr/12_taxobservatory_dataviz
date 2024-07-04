@@ -22,27 +22,25 @@ PATH_TO_DATA = f"{cfg.DATA}/data_final_dataviz.csv"
 
 data: pd.DataFrame = None
 
+# Performance optimization
+def init_data():
+    global data
+    data = pd.read_csv(f"{PATH_TO_DATA}", sep=",", low_memory=False, encoding="utf-8")
+    # Filter dataset with the maximum year to take in account
+    data = data.loc[data["year"] <= MAX_YEAR_OF_REPORTS].reset_index()
+
+init_data()
 
 def on_init(state: State):
     # print('MAIN ON_INIT...')
     # print(f'MAIN STATE {get_state_id(state)}')
 
-    # Init data
-    init_data(state)
     # Call company on_init
     on_init_company(state)
     # Call company on_init
     on_init_home(state)
 
     # print('MAIN ON_INIT...END')
-
-
-# Performance optimization
-def init_data(state: State):
-    df = pd.read_csv(f"{PATH_TO_DATA}", sep=",", low_memory=False, encoding="utf-8")
-    # Filter dataset with the maximum year to take in account
-    df = df.loc[df["year"] <= MAX_YEAR_OF_REPORTS].reset_index()
-    state.data = df
 
 
 # Add pages
@@ -109,6 +107,7 @@ if __name__ == "__main__":
 else:
     ## PRODUCTION
     # Start the app used by uwsgi server
+    gui_multi_pages.add_shared_variable("data")
     web_app = gui_multi_pages.run(
         dark_mode=False,
         stylekit=stylekit,
