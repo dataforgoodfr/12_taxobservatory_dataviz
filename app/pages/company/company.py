@@ -110,7 +110,9 @@ def update_viz(state: State):
 
 
 def update_viz_company(state: State):
-    # print(f'update viz company : {state.selected_company}')
+    # print(f'update_viz_company state id : {get_state_id(state)}')
+    # print(f'update_viz_company state.selected_year: {state.selected_year}')
+    # print(f'update_viz_company state.selected_company: {state.selected_company}')
 
     id = "company_sector"
     state.viz[id] = Viz(
@@ -157,8 +159,9 @@ def update_viz_company(state: State):
 
 
 def update_viz_year(state: State):
-    # # same order as previous code
-    # print(f'update viz financial : {state.selected_company}')
+    # print(f'update_viz_year state id : {get_state_id(state)}')
+    # print(f'update_viz_year state.selected_year: {state.selected_year}')
+    # print(f'update_viz_year state.selected_company: {state.selected_company}')
 
     # Transparency
     id = "fin_transparency_score"
@@ -280,14 +283,16 @@ def update_viz_year(state: State):
 
 # Update data and figures when the selected company changes
 def on_change_company(state: State):
-    # print("Chosen company: ", state.selected_company)
+    # print("on_change_company state.selected_company: ", state.selected_company)
+    # print("on_change_company state.selected_year: ", state.selected_year)
     update_full(state)
 
 
 # Update data and figures when the selected year changes
 def on_change_year(state: State):
-    # print("Chosen year: ", state.selected_year)
-    update_viz_year(state)
+    # print("on_change_year state.selected_company: ", state.selected_company)
+    # print("on_change_year state.selected_year: ", state.selected_year)
+    update_viz(state)
 
 
 # Generate page from Markdown file
